@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAE45JREFUeF7tXXuYVMWVP9XT093zlIcoojiDA0NEEAkYQNFFjOga44No1MT1I18GTdZE3c+oSWB97GKiiewmJtlVGFbWTQxkExPFNUbkEaLgAzA8FWSEcRR5zQDDzPRMT3fXfr+rTXp67r316u65jbe+r//qulWnzvlV1alT55xiJChDn9hXEwiGzmbJ5FgKsEnEaTIRVYq+8//vEw60EqO1lOSv8UBgYzIe29R068kNbpQwpz+HLjpcUxRPPkRE1/fJUPxOs8WBJYlgYHbTzH62QLAFQNWCltmMsfuIeChbVPjt9CUHWIxz/i+NswZgQvcovQBQVd+ymRGN7kty/b5zwwFOtKWxbsCY9NZ7AKB6YfNy4mxabrr3W/UEBxhfsfvrAy9O0XIMAMPmH7iSB4qe9QSRPhE55QBLJq7adcug59CJBYCap46elOiK7SbGSnLas9+4NzjAebQoHKpuuLlivwWAqvpDCxjxOm9Q51ORDw5wYvWNdf1nsTPmt9YmA/Ht+ejU78NbHAgkgyNZ9X+13EhJetpbpPnU5IUDAfoKG7bw0KOc87vy0qHfiac4wBibx6rrW1YS0VRPUeYTky8OrAIAWomoIl89+v14igNHAQDuKZJ8YvLKAR8AeWW39zrzAeA9meSVIh8AeWW39zrzAeA9meSVIh8AeWW39zrzAeA9meSVIh8AeWV3dju78LRiunNchEafGKRggKi1i9Pypm66b00HtXfLne59AGRXJnlr7cu1YbpnQgkNLOnp1AWxv9OSoDtWttO7hxNCenwACFnkvQoj+hXRz6eVUW3/IlviAII1e7rp1pfbhSuBDwDvyVdIEYR/+bDQx948DiXBiX71dhfdv7bDtT0fAEJ2e6vCDSPD9L3PlVBlyE38H9O8ryNJ3/1LB636oNtxED4AvCVfITW//PsKOn9IUFgPFbAVvLArRt9a0e4DQIpjHq+kMvtTQzkYTdLdq51XAX8F8LjQ08lbcEk5ff70YiWKk5zo19u7aM6r9rqADwAldvZd5bMHBekX08rotPKAMhHvHUlQ3bJ22nWk97HQB4AyO/vmg5tHhenec0uoNChW/jIpbOvm9ODaDvrtu7FexPsA6Bt5Kvf64ORSuunMMAXU5U/YBn7pcCT0AaAsir754GcXldEVZ+jH6v7u3Rh9Z3Xv04APgL6Rp3KvKsc/u8b/8mE33fxim78FKHPeIx8svbqSRg+0N/3KkLhkR5dlFMos/gogwz0P1HnpS5WEOwCdEk8SPbm1k37wRtQHgA4DvfCNCQA64pweeTNKT23r8gHgBWHq0GCiAzS2JulrL7X5dgAdxnvlGx0rIGjHEfD3O+1PAPjf1wG8ImEBHd//XAl97ayI5fmjUpqOJumOVe301v647Wc+AFS42Yd1rx0Rovsnl1J5sbwlCHv/Y2910hObOh0p9wHQh0JV6bqsmNGSL1TQWZJHwc4Ep/rNXTRvfW/NP71fHwAqUujjujAHf/XMMBUJFoFDnZz+Y2Mn1W9xnvmpofgA6GOhqnQ/7qQg/XRqGQ2tsFcEcN5/fW83zVvf6bjn+4YgFY57sO7siSU0c9TflEF4/cAdfNPBONVv6aLVLu5fdsPxVwAPCtmNJOgC3z4nQieVBmjn4QT99UCc1uyx1/BlhuYDQIZLx3EdHwDHsXBlhuYDQIZLx3EdHwDHsXBlhuYDQIZLx3EdHwDHsXBlhlbQAMCR6JrhIRo7KEjVlQHLTr6nLUlbmxP09PYu2tuelOHBp7pOQQJgcFmAcDuGIIkSBzfpaJzTy+93W14wPhCcMV5wAIBb1E8vKqPPDChyjY7FkFOx8rNf7ZA2jXppOcAKd+uYCF1wWpAiRYz2diRp8Ttd9KdG52BPVfoLDgAyodGZTEDChNslEyaoMjBX9SedEiRc/ozo3xPouOVbsj1GDwjCvmXpyikAgODLqotpypBiGt6/iE6MMKr4JKwZnioIXNzTnqRVTXErfk2U1mTqacX04wtL6cQSNa8IlYQJsozLZT2Mc+75pXSqQxhYV4LT45u66Ccb3K96ZWjMCQAQxXrjyBCNHFBEYdHd5SdUHuni9D9vu99f3z4uQreNLaGQhnNsd5JoweZO+vE6c6bJMFa3DibNry+voDEnug9S5Okj23/WAADF7BtnR+iKYSEaUMKE+7MdgbjOfLbB2X/t4QtK6frasOzYetXDHnrXn9uNLk+0O5f8UPbOXzYDiKhbYwAAsf84NmIJJjNhkahzu/9bY5x++EaUFm/v7cJsCgBsBUsbYpaPnBeL6hbnFvUrOz4jACBN2ZyJJTS8n1gjlyUI9XB8m7WsdxiTKQDQ9odtSfr2SmcnSTc6L60qplvPjlgnkOIAo7dbEvSDNzrotY/0r2PT+1NVcN38/WX5rQ2AByaX0vUjQ9bxJNsF6c2m/w7PGPQsYP6dn40Y9YltBq5SCJSQLRD8N8ZGaPTAj/PxpRcACskX3PLwyPSjOvtTbToFfcr0iTrKAMBe/8MppXTBqcVC3zRZIjLrwXBz+6p2enNvz5k17IQiqr+kjM44QUMLTOsE7X75/44KyYOVceaoMI2yEXzq42ydMKD13zhSPfx7/b44Xfu8eCxOg1UCAHzSHjq/VMoII+SuSwUnAOCTTJconX72dyRp7utRWvpe74QJmIlX1YRo4ilBAthl1jeczeF+/Z8bxU6YdvSaANtptZTlizQAYJj41/NKrf0+18VtUFA6F11aThNOlsuU5UYrtgOcqVMFR1bVwIvUt9sPJeiby+3TsIj4BSUaR1zZI3N6e6YnGykAwPz62CfmV9FgsvG/aFnDLMU2hBnqlQIgYRWAO7ZqWTi9nKYNVUv+lOrjg7Yk3bainTYd0FNEhQDIt/AxH/93RxfdaxPLns7Yr34mTPecK5cwUVUguvVldYv09rGtIvuHk9VPREtOtwAst098vozOG1IstReKiJX53y2hUeb3XgMBrJlIzQpjlmwxWf7RB7aey57pfWKS7d91Bbh7QgnNGhOhYo2VFjMZytyKpm56uzlBk4cEadLgYqGV8NU9cbrpj/JarUnYtCyTZOuJcvLZtaMb9ZtqS5VfmTQ4AgDpyHHnfkJYRg/u2SyUq+ffi9GcjLz1WFHum1RC1wwP24IKgPneK/JnamjrMJ3q0CgrVNV62Iuvek4OwND+n5xeTlWVGjPsE8JyYgeQvZCwYw6UaiyBsLk7FdwZ1I2O9DAdH4gm6dF1nfSbHb1NwE7tmChPqoKVrQ/gw9IoU3QiftPbxQUXIn9FAaButNiuACZn7c0HE3TjC0eFV7upq+JzBwdpfztXduHStZzJCEa3TixB9IuNUes0IFNMcv+h/Q4kgHwtqjRphFvAeUOCNO/vymhwqfqydLiLW8+V2BlYZBiiUkfXcqbSh2rd5iine19pp+Xvy3nsPHVZuWVR1S0waN21uoNe+VCuP7t+eq0AiD79Yo37YwR2DcmkJtcdaOZ3JpYzEQ3Ywg51Ji3HFVXDjIpGjhXw2SsrqMbAsGZ6BAQvegDAZFnVOQKJhOH0/z+cGabvIm+uQrYMtAUt/aXGbsJRM/MOK5bktPFAgtbtjdO3zoloTQKV/f/i04vpkSllRlfoTskfVfjaAwC6sx8d6hhBVAhNr6ubNlVmz9TdAnEf8JMN7ulY0sdgkvw5BWan/L8qfD0GABOLFLTRxzd20r9lwUdNRLzJ8i9jNtXVLVRt8rpJn1L8yYYvQI8tAKnIcTTTuQxRHbxIyG7/mxydRHcMJuAStZ05Jt1VLNVOtnh+bAUwyUWrOngTAOgenWTuGEx0C9Xl+OnLK2jyKfo3mluaE/TFP+ibgFMysACAJ8hwz99Pw+oHxiJY4fsOT5KYCNvuW13Tr8werWuWxfEXwSd4oEm2mKR+RR8qCqcbTRYAdGcVGs7WXiTDOBPTqejMbPIky45DCZqxVGz8So3RpC+0oWpwEgLgt1dU0HhNBwtV44eMoJ3qmBydREumiVauOht1TxopvmST5+y651v5Y1PLtJ0rGg4nrMsPUVSPieBT3+ZSSI9cUErX1YaVr71ltpbMseMSC95VqSgpVd6IwKzSHrtndTu/f5K6USXVSb4UQFjOfvOFCholmSkznQkyx1RdJVhHG4ez6cNTyrQinLK1/yOO49raELH5m6JcJwlxisGm99EyaIXw4ZJ20VA9x5SjMU7/vMbZUWPKqcU078JSK/WaatGZAIsvr7CcTnWKzoqT2U+6Sz9b2tDFTR4jcnqKRGdwTt/gcgrLpm4IgpuXMfrU3VrcXuNyGsujF5ZZSS10Xv9Cm6b7PxR+xHOk7jnYmj3d3OQ8mmsAZBKsAyzRpYnuKUjFfQ10Q/gAso6xLTVulQunTF7h/mTmWeEel1xsx6E4132LRmcGqAjwOxNgnexJsMr3stuU7vnf7SWOTDofnlJKM0bYe0KpjMkpbE7UhhMv2UdtCa7rXi2jXIkIc/r/jnERyx8R+79pEd2a6R6DZYWRjVUMPND1AHKbSOyj9gTXcf5IEZSLSyDEAN42NqJ9TMoEjNs2pXsv7/YSV3r/2RI+2pS5zcwc+13jS6huTNgxnpId7Ehy3bDuXJiBsy18MMQNALpGGRnzr92ea7KaqR45RcIHLawtluQmy2w2j4HZXPbTGe1mqdM9Aor2/2zO/NRYRMps+phlhJ8VACDPz92r5V25nWZALhgmowTiSAarnOokWPtRnL7ygr37d7YUvkxeyQJAduXBNma8ApiGR0MBhWECOf90z/miZdVtldIFgN22AhDNPa/UeuTZ5KjnNB4ZAKiAD7kN2L72BNexgKUTCUdKeAIjUYLKnYBTKjSRQFX/zzYA7LTxfORNcFttAT5kUJteJWcwS70naHQMTBcEVgKkaP35W1FhIkMQi7CzGcNDWdP03UDhNnN0VoDME4BOqhzOiZjiCRc8Xvl+t5U8I32iYSLNmVhq3ZPINpnKMsbeaYnzkf2zF/OfigncsD9Oa/fEaVdrwsrKBWPThMFBKwx64uCgluCx0uhsE9kGAMAGJRBjHFIeoHMGyafDw7fgEY50qnpH6tt9HUnLgxlt6PSPUHa8L/TouiixZY0xjv3X6wVu5+EioohDbmDdFcDEG0qXZ7DnH+xMUjYnniwtmTobe2xDlCMBkk4EsGynpvWA2FUfxGnKkKDWrHE7siE0zcQfQnVs2D4Wbeuk/uEAfWlESPVz4/qZaXPZNc+1cpMEBcYUCRpIBZsi/EnnuIbmRQYUXV8A1bGnz76bzgwbZzxT7d8u+tryCTQJCFElQqU+hP9SY8yyM0yvKs4ZAExdtGXHtLs1SbcsayPoJLoWSNm+MushAeeP3ozSr97pGX1tAQDE4KryFA/l3IHw//xBt5XlGxqvjraeYoJoBchG/kGRYKC4PfxmlP6w82+ew/BwwhaU6wLh//uGKC3a2jv0/lhcQLauXrMxGLsEEyYAAIDgEfT7NOan02nqpSsas9PsMwnGEfWZ+h93FtD2M2d+6v8esYGmnjeyRLnVg/vWf2/rnTVc12aPvkQAQJ1cbYNus0/0FrApP/F8zgOvddAylwcmegBA1ZpkSmD691CQkEvokXVR2/dvTWapDABysSfjuPejde4JHEyScTjxH7xEsC62nLf2u6ePs80Qkss8wHZEY9Y/szNm5fJ3MyW/OKNS6+wsExQKurIlDAhgW3OC5r4uTiRtko7HhJe2W0B6g1cPD9Gd40ro9Eq5dKk6q4Hqw046rlsqefWzkRZPFszp/MpG4kudp+NBg2uauNRbANfVhqxnWmTtzG5gwOxoiXJ6uSlGCzd3WUci2aKaU0/nptJyQZ9aRrDvq9zoAcxIG/+zv3YKl1278epejOFiCibpJ7d0Cu9g7PoVZgrFR2AKMllfWROi2v4B5dQpqbQr6/cn6I+7YkqJFNOJxn3C/EvKrTcCRQV9whcQaed0no2DPyKAj8zkTvcPEDrO9iubuq3nbnT6SR8H+PxPn43Q1TVh13yK2exXCgCZzMaFDrTyqoqAdRmRWRC8APMr9t6tBxO0+sNupWtiN+EiqfI3xzq/GYBZD+0X4dqPb5LL1uXWH655zz05SNDYET2NR64QDtdwJKmdn1cEXvwPpXfMwCIaMwgAZAQTLq6DoVuorJqivrQAIGo01//DJoA0schcjmUa++7BTk5bm+P04q5u48cbck2/l9ovSAB4iYGFTosPgEKXoCH9PgAMGVjon/sAKHQJGtLvA8CQgYX+OQBwhIgqC30gPv1aHGhl1QtbXiROl2p97n9U2Bxg9CdWvaD5AWLs/sIeiU+9Fgc4f5BVLTx0DeP8Ga0G/I8KmgOcsRls6BP7aoqKincW9Eh84rU4kEh0D7cu+KrrWxYT0fVarfgfFSoHluyuG3CDBYChiw7XFMX5NiKef0f1QmVfQdPNYokgG9U0s1/DsSv+qgUtsxmjuQU9Lp94KQ5wTnMaZw14CJV7+HhU1bdsZkSjpVrxKxUkBzjRlsa6AWNSxPdy8qle2LycOJtWkKPziXbnAOMrdn994MXplWy9vIbNP3AlZ4HFxFiJz9PjgAOcRxlP3rDrlkHPZY7G0c2v5qmjJ8Vj8YcY8brjgAWf2iFwYvXBUHB2w80V++2YIPTzPGN+a20yGB/POBvPOR9PRPhVfGo56u2BI2nResbYes74+kA8uP69Wyp3uJH8/6fK+IzIyObzAAAAAElFTkSuQmCC"
+      type="image/x-icon"
+    />
+    <style>
+      .batting td {
+        border: solid;
+
+        border-width: 1px;
+        width: 20%;
+        padding: 15px;
+      }
+      .batting th {
+        /* border: solid;
+        border-radius: 1px;
+        border-width: 2px; */
+        width: 20%;
+        text-align: left;
+        padding: 20px;
+      }
+      .batting table {
+        border: solid;
+        border-radius: 1px;
+        border-width: 2px;
+        border-collapse: collapse;
+      }
+      .bowling td {
+        border: solid;
+
+        border-width: 1px;
+        width: 20%;
+        padding: 15px;
+      }
+      .bowling th {
+        /* border: solid;
+        border-radius: 1px;
+        border-width: 2px; */
+        width: 20%;
+        text-align: left;
+        padding: 9.5px;
+      }
+      .bowling table {
+        border: solid;
+        border-radius: 1px;
+        border-width: 2px;
+        border-collapse: collapse;
+      }
+      .matchinfo table {
+        border: solid;
+        border-radius: 1px;
+        border-width: 2px;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .matchinfo td {
+       
+        width: 10%;
+        padding: 10px;
+      }
+      h3{
+        background-color: rgba(232, 160, 160, 0.566);
+        color: rgb(44, 53, 5);
+      }
+      .won{
+        font-size: 35px;
+        font-weight: 800;
+      }
+
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scorecard Ind v Ban</title>
+  </head>
+  <body>
+    <head>
+      <h1>India's Innings  {280-4 (49 Overs)}</h1>
+    </head>
+    <main>
+      <h3>Batting</h3>
+      <div class="batting">
+        <table>
+            <table class="head">
+                <tr>
+                  <th>S.no</th>
+                  <th>Player</th>
+                  <th>Bowler</th>
+                  <th>R</th>
+                  <th>B</th>
+                  <th>4s</th>
+                  <th>6s</th>
+                  <th>SR</th>
+                </tr>
+              </table>
+              <table class="bodyt">
+                <tr>
+                  <td>1.</td>
+                  <td>Rohit Sharma</td>
+                  <td>b Ziaur</td>
+                  <td>21</td>
+                  <td>29</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>72.41</td>
+                </tr>
+      
+                <tr>
+                  <td>2.</td>
+                  <td>Shikhar Dhawan</td>
+                  <td>lbw b Razzak</td>
+                  <td>28</td>
+                  <td>44</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>63.64</td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>Virat Kohli</td>
+                  <td>b Rubel</td>
+                  <td>136</td>
+                  <td>122</td>
+                  <td>16</td>
+                  <td>2</td>
+                  <td>111.48</td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>Ajinkya Rahane</td>
+                  <td>c (sub)I Kayes b Gazi</td>
+                  <td>73</td>
+                  <td>83</td>
+                  <td>7</td>
+                  <td>1</td>
+                  <td>87.95</td>
+                </tr>
+                <tr>
+                  <td>5.</td>
+                  <td>Ambati Rayudu</td>
+                  <td>notout</td>
+                  <td>6</td>
+                  <td>15</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>60</td>
+                </tr>
+                <tr>
+                  <td>6.</td>
+                  <td>Dinesh Karthik</td>
+                  <td>not out</td>
+                  <td>2</td>
+                  <td>2</td>
+                  <td>0</td>
+                  <td></td>
+                  <td>100</td>
+                </tr>
+              </table>
+        </table>
+      </div>
+      <br /><br />
+      <h3>Bowling</h3>
+      <div class="bowling">
+        <table class="head">
+          <tr>
+            <th>S.no</th>
+            <th>Bowler</th>
+            <th>O</th>
+            <th>M</th>
+            <th>R</th>
+            <th>W</th>
+            <th>NB</th>
+            <th>WD</th>
+            <th>ECO</th>
+          </tr>
+        </table>
+        <table class="bodyt">
+          <tr>
+            <td>1.</td>
+            <td>Bhubneshwar kumar</td>
+            <td>8</td>
+            <td>1</td>
+            <td>41</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>5.13</td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td>Mohammed Shami</td>
+            <td>10</td>
+            <td>1</td>
+            <td>50</td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>5.00</td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td>Varun Aaron</td>
+            <td>7.5</td>
+            <td>0</td>
+            <td>74</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>9.87</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td>Ravichandran Ashwin</td>
+            <td>10</td>
+            <td>1</td>
+            <td>50</td>
+            <td>1</td>
+            <td>0</td>
+            <td>9</td>
+            <td>5.00</td>
+          </tr>
+          <tr>
+            <td>5.</td>
+            <td>Ambati Rayudu</td>
+            <td>3</td>
+            <td>0</td>
+            <td>17</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>5.67</td>
+          </tr>
+          <tr>
+            <td>6.</td>
+            <td>Ravindra Jadeja</td>
+            <td>10</td>
+            <td>0</td>
+            <td>37</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3.70</td>
+          </tr>
+          <tr>
+            <td>7.</td>
+            <td>Virat Kohli</td>
+            <td>1.1</td>
+            <td>0</td>
+            <td>6</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>5.45</th>
+          </tr>
+        </table>
+      </div>
+    </main>
+    <footer>
+        <h3>Match info</h3>
+        <div class="matchinfo">
+            <table>
+                <tr>
+                    <td>Match</td>
+                    <td>BAN vs IND, 2nd Match, Asia Cup</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>Wednesday, February 26, 2014</td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td>1:30 PM</td>
+                </tr>
+                <tr>
+                    <td>Venue</td>
+                    <td>Khan Shaheb Osman Ali Stadium, Fatullah</td>
+                </tr>
+                <tr>
+                    <td>Umpire</td>
+                    <td>Billy Bowden, Nigel Llong</td>
+                </tr>
+                <tr>
+                    <td>Third Umpire</td>
+                    <td>Raveendra Wimalasiri</td>
+                </tr>
+                <tr>
+                    <td>Match Referee</td>
+                    <td>Jeff Crowe</td>
+                </tr>
+                <tr>
+                    <td>Bangladesh Squad</td>
+                </tr>
+                <tr>
+                    <td>Playing</td>
+                    <td>Shamsur Rahman, Anamul Haque (wk), Mominul Haque, Mushfiqur Rahim (c), Nasir Hossain, Naeem Islam, Ziaur Rahman, Sohag Gazi, Mashrafe Mortaza, Abdur Razzak, Rubel Hossain</td>
+                </tr>
+                <tr><td>Bench</td>
+                <td>Imrul Kayes, Arafat Sunny, Al-Amin Hossain</td></tr>
+                <tr>
+                    <td>Indian squad</td>
+                </tr>
+                <tr>
+                    <td>Playing</td>
+                    <td>Shikhar Dhawan, Rohit Sharma, Virat Kohli (c), Ambati Rayudu, Ajinkya Rahane, Dinesh Karthik (wk), Ravichandran Ashwin, Ravindra Jadeja, Bhuvneshwar Kumar, Mohammed Shami, Varun Aaron</td>
+                </tr>
+                <tr>
+                    <td>Bench</td>
+                    <td>Cheteshwar Pujara, Stuart Binny, Amit Mishra, Ishwar Pandey</td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+
+    <center>
+        <p class="won">&#127882 IND WON BY 6 WKTS &#127882</p>
+    <img src="https://cdn.britannica.com/97/1597-004-05816F4E/Flag-India.jpg" alt="image" width="70px"></center>
+  </body>
+</html>
